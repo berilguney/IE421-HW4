@@ -68,7 +68,8 @@ server <- function(input, output) {
     
     x    <- mtcars$mpg
     ggplot(mtcars, aes(x=mpg))+
-      geom_histogram(stat="bin",binwidth = 5,col="white",fill="steelblue")+facet_wrap(facets =.~mpgData[[input$variable]],nrow=3)
+      geom_histogram(stat="bin",binwidth = 5,col="white",fill="steelblue")+
+      facet_wrap(facets =.~mpgData[[input$variable]],nrow=3)
   })
   
 }
